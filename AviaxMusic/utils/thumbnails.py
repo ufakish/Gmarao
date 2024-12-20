@@ -69,15 +69,15 @@ def crop_center_circle(img, output_size, border, border_color, crop_scale=1.5):
         )
     )
     
-    img = img.resize((output_size - 1*border, output_size - 1*border))
+    img = img.resize((output_size - 2*border, output_size - 2*border))
     
     
     final_img = Image.new("RGBA", (output_size, output_size), border_color)
     
     
-    mask_main = Image.new("L", (output_size - 1*border, output_size - 1*border), 0)
+    mask_main = Image.new("L", (output_size - 2*border, output_size - 2*border), 0)
     draw_main = ImageDraw.Draw(mask_main)
-    draw_main.ellipse((0, 0, output_size - 1*border, output_size - 1*border), fill=255)
+    draw_main.ellipse((0, 0, output_size - 2*border, output_size - 2*border), fill=255)
     
     final_img.paste(img, (border, border), mask_main)
     
@@ -186,8 +186,8 @@ async def gen_thumb(videoid: str):
         title_font = ImageFont.truetype("AviaxMusic/assets/font3.ttf", 45)
 
 
-        circle_thumbnail = crop_center_circle(youtube, 400, 25, start_gradient_color)
-        circle_thumbnail = circle_thumbnail.resize((400, 300))
+        circle_thumbnail = crop_center_circle(youtube, 400, 20, start_gradient_color)
+        circle_thumbnail = circle_thumbnail.resize((400, 400))
         circle_position = (120, 160)
         background.paste(circle_thumbnail, circle_position, circle_thumbnail)
 
@@ -233,14 +233,13 @@ async def gen_thumb(videoid: str):
         draw_text_with_shadow(background, draw, (text_x_position, 400), "00:00", arial, (255, 255, 255))
         draw_text_with_shadow(background, draw, (1080, 400), duration, arial, (255, 255, 255))
         
-        play_ic = Image.open("AviaxMusic/assets/play_ic.png")
-        play_ic = play_ic.resize((530, 58))
-        background.paste(play_ic, (65, 480), play_ic)
-        
+        play_icons = Image.open("AviaxMusic/assets/play_icons.png")
+        play_icons = play_icons.resize((580, 165))
+        background.paste(play_icons, (text_x_position, 540), play_icons)
 
         play_iconmm = Image.open("AviaxMusic/assets/play_icon.png")
         play_iconmm = play_iconmm.resize((580, 62))
-        background.paste(play_iconmm, (text_x_position, 470), play_iconmm)
+        background.paste(play_iconmm, (text_x_position, 450), play_iconmm)
 
         os.remove(f"cache/thumb{videoid}.png")
 
