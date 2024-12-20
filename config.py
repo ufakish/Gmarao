@@ -39,8 +39,8 @@ GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/jiosaavnsupport")
-SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/jiosaavnsupport")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://www.jiosaavn.com/")
+SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://www.jiosaavn.com/")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
@@ -81,21 +81,21 @@ confirmer = {}
 
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://envs.sh/1Mt.jpg"
+    "START_IMG_URL", "https://envs.sh/CwU.jpg"
 )
 PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://envs.sh/1mX.jpg"
+    "PING_IMG_URL", "https://envs.sh/CLg.jpeg"
 )
-PLAYLIST_IMG_URL = "https://envs.sh/1mX.jpg"
-STATS_IMG_URL = "https://envs.sh/1mX.jpg"
-TELEGRAM_AUDIO_URL = "https://envs.sh/1mX.jpg"
-TELEGRAM_VIDEO_URL = "https://envs.sh/1mX.jpg"
-STREAM_IMG_URL = "https://envs.sh/1mX.jpg"
+PLAYLIST_IMG_URL = "https://envs.sh/CLg.jpeg"
+STATS_IMG_URL = "https://envs.sh/CLg.jpeg"
+TELEGRAM_AUDIO_URL = "https://envs.sh/CLg.jpeg"
+TELEGRAM_VIDEO_URL = "https://envs.sh/CLg.jpeg"
+STREAM_IMG_URL = "https://envs.sh/CLg.jpeg"
 SOUNCLOUD_IMG_URL = "https://envs.sh/1mX.jpg"
-YOUTUBE_IMG_URL = "https://envs.sh/1mX.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://te.legra.ph/file/37d163a2f75e0d3b403d6.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://te.legra.ph/file/b35fd1dfca73b950b1b05.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://te.legra.ph/file/95b3ca7993bbfaf993dcb.jpg"
+YOUTUBE_IMG_URL = "https://envs.sh/CLg.jpeg"
+SPOTIFY_ARTIST_IMG_URL = "https://envs.sh/CLg.jpeg"
+SPOTIFY_ALBUM_IMG_URL = "https://envs.sh/CLg.jpeg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://envs.sh/CLg.jpeg"
 
 
 def time_to_seconds(time):
